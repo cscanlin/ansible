@@ -297,7 +297,8 @@ def main():
             changed = filtered_output
 
     module.exit_json(changed=changed, out=out, cmd=cmd, app_path=app_path, virtualenv=virtualenv,
-                     settings=module.params['settings'], pythonpath=module.params['pythonpath'])
+                     settings=module.params['settings'], pythonpath=module.params['pythonpath'],
+                     stdout=out, stdout_lines=lines)
 
 
 if __name__ == '__main__':
